@@ -88,3 +88,18 @@ for (let entry of Object.entries(circle)) {
 if ('radius' in circle) console.log('yes');
 
 // 9-Cloning an Object
+const circle9 = {
+	radius: 1,
+	draw() {
+		console.log('draw');
+	}
+};
+
+// const another9 = {};
+// for (let key in circle9) {
+// 	another9[key] = circle[key];
+// }
+// const another9 = Object.assign( { color: 'yellow' }, circle9 );
+const another9 = { ...circle };
+
+console.log(another9);

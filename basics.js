@@ -1,6 +1,6 @@
 // 1-Variables
-// let name = "Arim";
-// console.log(name);
+let name = 'Arim';
+console.log(name);
 
 // Cannnot be a reserved keyword
 // Should be meaningful
@@ -9,16 +9,16 @@
 // Are case-senseitive
 
 // 2-Constants
-// const interestRate = 0.3;
-// interestRate = 1;
-// console.log(interestRate);
+const interestRate = 0.3;
+interestRate = 1;
+console.log(interestRate);
 
 // 3-Primitive Types // Value Types
-// let name = "Arim"; // String Literal
-//let age = 31; // Number Literal
-//let isApproved = true; // Boolean Literal
-//let firstName = undefined; // undefined is actually type, but also value
-// let selectedColor = null; // null;
+let name = 'Arim'; // String Literal
+let age = 31; // Number Literal
+let isApproved = true; // Boolean Literal
+let firstName = undefined; // undefined is actually type, but also value
+let selectedColor = null; // null;
 
 // 4-Dynamic Typing
 //can change type
@@ -28,23 +28,23 @@
 
 // curly braces is object literal
 let person = {
-  name: "Arim",
+  name: 'Arim', // key: value
   age: 31
 };
 //console.log(person);
 
 // Dot Notation
-person.name = "Karlie";
+person.name = 'Karlie';
 
 // Bracket Notation
-let selection = "name";
-person[selection] = "Mary";
+let selection = 'name';
+person[selection] = 'Mary';
 
 console.log(person.name);
 
 // 6-Arrays , array is object
 // square bracket = array literals, and indicated empty array
-let selectedColors = ["red", "blue"];
+let selectedColors = ['red', 'blue'];
 selectedColors[2] = 1;
 console.log(selectedColors);
 
@@ -56,7 +56,7 @@ console.log(selectedColors);
 
 // Perfoming a task
 function greet(name, lastName) {
-  console.log("Hello " + name + " " + lastName);
+  console.log('Hello ' + name + ' ' + lastName);
 }
 
 // Calculating a value
