@@ -18,7 +18,6 @@ function Circle(radius) {
 		console.log('draw');
 	};
 }
-
 // new keywords=  create empty object, set this to point of the object, return the object from the function
 // return object with this keyword
 const another = new Circle(1);
@@ -43,6 +42,12 @@ let a = {}; // let x = new Object();
 console.log(Circle.name);
 console.log(Circle.constructor);
 
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function() {
+    console.log('draw');
+  }
+}
 Circle.call({}, 1);
 
 const another2 = new Circle(1);
@@ -77,6 +82,11 @@ for (let key in circle) {
 	console.log(key, circle[key]);
 }
 
+// for of only use such as array and map..
+// object is not iterable
+// object is built in constructor function
+// all functions are object
+
 for (let key of Object.keys(circle)) {
 	console.log(key);
 }
@@ -88,18 +98,39 @@ for (let entry of Object.entries(circle)) {
 if ('radius' in circle) console.log('yes');
 
 // 9-Cloning an Object
-const circle9 = {
+const circle = {
 	radius: 1,
 	draw() {
 		console.log('draw');
 	}
 };
 
-// const another9 = {};
-// for (let key in circle9) {
-// 	another9[key] = circle[key];
-// }
-// const another9 = Object.assign( { color: 'yellow' }, circle9 );
-const another9 = { ...circle };
+// old way
+const another = {};
+for (let key in circle9) {
+	another[key] = circle[key];
+}
 
-console.log(another9);
+// new way
+const another = Object.assign( { color: 'yellow' }, circle );
+const another = { ...circle };
+console.log(another);
+
+// 10-Garbage Collection 메모리 관리
+
+// 11-Math
+
+// 12-String 
+// String primitive
+const message = 'This is my\n first message';
+// String object
+const another = new String('hi');
+message.split(' ')
+
+// 13-Templeate Literal
+
+const name = 'John';
+const message = 'Hi' + name + ',\n';
+
+const another = 
+`Hi ${name} ${2+3} glad to see you `
