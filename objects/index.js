@@ -134,3 +134,6 @@ const message = 'Hi' + name + ',\n';
 
 const another = 
 `Hi ${name} ${2+3} glad to see you `
+
+// 14-Date
+const now = new Date()
