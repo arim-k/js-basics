@@ -163,3 +163,38 @@ const items = filtered.map(n => '<li>' + n + '</li>');
 
 const html = items.join();
 console.log(html);
+
+const items2 = filtered.map(n => {
+	({
+		value: n
+	});
+});
+console.log(items2);
+
+// chaining
+numbers
+	.filter(n => n >= 0)
+	.map(n => ({ value: n }))
+	.filter(obj => obj.value > 1)
+	.map(obj => obj.value);
+
+// 16-Reducing an Array
+const numbers = [1, -1, 2, 3];
+let sum = 0;
+for (let n of numbers) {
+	sum += n;
+}
+
+const sum = numbers.reduce(
+	(accumulator, currentValue) => accumulator + currentValue
+);
+
+console.log(sum);
+
+var sum = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(function(
+	accumulator,
+	currentValue
+) {
+	return accumulator + currentValue.x;
+},
+initialValue);
